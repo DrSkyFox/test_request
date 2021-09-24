@@ -27,18 +27,18 @@ public class RequestListenerResponseJSONController {
     public Response listenerPost(@RequestBody RequestData body) {
         log.info("Post Request... Body: {}", body);
         if(!body.getIsError()) {
-            service.getResponseMsg(template + body, "success");
+            service.getResponseMsg(template + body, false);
         }
-        return service.getResponseMsg(template + body, "error");
+        return service.getResponseMsg(template + body, true);
     }
 
     @GetMapping("/get")
     public Response listenerGet(@RequestBody RequestData body) {
         log.info("Get Request... Body: {}", body);
         if(!body.getIsError()) {
-            service.getResponseMsg(template + body, "success");
+            service.getResponseMsg(template + body, false);
         }
-        return service.getResponseMsg(template + body, "error");
+        return service.getResponseMsg(template + body, true);
     }
 
 

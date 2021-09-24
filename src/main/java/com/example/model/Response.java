@@ -11,6 +11,6 @@ import lombok.Setter;
 @Setter(value = AccessLevel.PUBLIC)
 public class Response {
     private Long counter;
-    private String status;
+    private Boolean errors;
     private String body;
 }
