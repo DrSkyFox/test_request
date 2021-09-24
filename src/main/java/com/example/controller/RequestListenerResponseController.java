@@ -38,9 +38,9 @@ public class RequestListenerResponseController {
     ) {
         log.info("Get Request... Body: {}; error: {}", body, error);
         if(!error) {
-            return service.getResponseMsg(template + body,false);
-        } else
             return service.getResponseMsg(template + body,true);
+        } else
+            return service.getResponseMsg(template + body,false);
     }
 
 

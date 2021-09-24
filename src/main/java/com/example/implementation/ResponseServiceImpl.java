@@ -13,7 +13,7 @@ public class ResponseServiceImpl implements ResponseService {
     private final AtomicLong counter = new AtomicLong();
 
     @Override
-    public Response getResponseMsg(String body, Boolean error) {
-        return Response.builder().counter(counter.incrementAndGet()).errors(error).body(body).build();
+    public Response getResponseMsg(String body, Boolean success) {
+        return Response.builder().counter(counter.incrementAndGet()).success(success).body(body).build();
     }
 }
