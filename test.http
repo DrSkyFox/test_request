@@ -1,0 +1,13 @@
+POST 127.0.0.1:8080/pull_json/post_tera
+Content-Type: application/json
+
+{
+  "MessageJSON":
+  {
+	"login": "login",
+	"password": "secret",
+	"target": 71234567890,
+	"message": "ку-ку",
+	"sender": "terasms.ru"
+  }
+}

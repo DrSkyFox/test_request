@@ -16,4 +16,6 @@ public class ResponseServiceImpl implements ResponseService {
     public Response getResponseMsg(String body, Boolean success) {
         return Response.builder().counter(counter.incrementAndGet()).success(success).body(body).build();
     }
+
+
 }
